@@ -1,16 +1,14 @@
-# stateful_lifecycle
+# Lifecycle of a Stateful Widget
 
-A new Flutter project.
+This Flutter application helps visualize the lifecycle of a stateful widget through three examples. The examples demonstrate different scenarios involving stateful widgets, parent-child relationships, and the impact of state changes on the widget tree.
 
-## Getting Started
+## Examples
 
-This project is a starting point for a Flutter application.
+### Example 1: Simple Widget
+This example showcases a single stateful widget and its lifecycle. It illustrates the creation, initialization, build, state update, and disposal stages of the widget's lifecycle.
 
-A few resources to get you started if this is your first Flutter project:
+### Example 2: Parent-Child Relationship
+In this example, a parent widget contains a child widget. The behavior of the widget tree is observed when the parent's value is changed, as well as when a value passed from the parent to the child is modified. Additionally, the scenario where the child widget is a constant is explored to understand the impact on the widget tree.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Example 3: Inherited Widgets
+The third example focuses on inherited parent and child widgets. It demonstrates how inherited widgets propagate data down the widget tree, ensuring efficient updates and avoiding unnecessary rebuilds.
