@@ -46,7 +46,7 @@ class _Example2State extends State<Example2> {
     });
   }
 
-  String text = 'hello';
+  String text = 'hello!';
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +75,13 @@ class _Example2State extends State<Example2> {
             ),
             Child(text: text),
             // const Child(text: 'constant text'), //constant child
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                setState(() => text += 'hello!');
+              },
+              child: const Text('Update Text (parent)'),
+            ),
           ],
         ),
       ),

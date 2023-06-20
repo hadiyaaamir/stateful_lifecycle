@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class Child extends StatefulWidget {
@@ -7,9 +9,12 @@ class Child extends StatefulWidget {
   });
 
   final String text;
-
   @override
-  State<Child> createState() => _ChildState();
+  // ignore: no_logic_in_create_state
+  State<Child> createState() {
+    print('create child state');
+    return _ChildState();
+  }
 }
 
 class _ChildState extends State<Child> {

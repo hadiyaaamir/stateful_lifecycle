@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'inherited_child.dart';
 import 'inherited_widget.dart';
@@ -6,11 +8,19 @@ class InheritedParent extends StatefulWidget {
   const InheritedParent({super.key});
 
   @override
-  State<InheritedParent> createState() => _InheritedParentState();
+  // ignore: no_logic_in_create_state
+  State<InheritedParent> createState() {
+    print('create state');
+    return _InheritedParentState();
+  }
 }
 
 class _InheritedParentState extends State<InheritedParent> {
   String parentData = 'Hello, world!';
+
+  _InheritedParentState() {
+    print('constructor, mounted: $mounted');
+  }
 
   void updateParentData() {
     setState(() {
